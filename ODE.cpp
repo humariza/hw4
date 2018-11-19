@@ -59,21 +59,21 @@ for(int i=0; i<N;i++){
     l12=dt*derivaday2(velocidadx[i],velocidady[i],y[i]);
 
 
-    k21=dt*derivadax(velocidadx[i]+0.5*l11);
-    l21=dt*derivadax2(velocidadx[i]+0.5*l11,velocidady[i]+0.5*l12,x[i]+0.5*k11);
-    k22=dt*derivaday(velocidady[i]+0.5*l12);
-    l22=dt*derivaday2(velocidadx[i]+0.5*l11,velocidady[i]+0.5*l12,y[i]+0.5*k12);
+    k21=dt*derivadax(velocidadx[i]+0.5*l11*dt);
+    l21=dt*derivadax2(velocidadx[i]+0.5*l11*dt,velocidady[i]+0.5*l12*dt,x[i]+0.5*k11*dt);
+    k22=dt*derivaday(velocidady[i]+0.5*l12*dt);
+    l22=dt*derivaday2(velocidadx[i]+0.5*l11*dt,velocidady[i]+0.5*l12*dt,y[i]+0.5*k12*dt);
 
         
-    k31=dt*derivadax(velocidadx[i]+l21*0.5);
-    l31=dt*derivadax2(velocidadx[i]+0.5*l21,velocidady[i]+0.5*l22,x[i]+0.5*k21);
-    k32=dt*derivaday(velocidady[i]+l22*0.5); 
-    l32=dt*derivadax2(velocidadx[i]+0.5*l21,velocidady[i]+0.5*l22,y[i]+0.5*k22);
+    k31=dt*derivadax(velocidadx[i]+l21*0.5*dt);
+    l31=dt*derivadax2(velocidadx[i]+0.5*l21*dt,velocidady[i]+0.5*l22*dt,x[i]+0.5*k21*dt);
+    k32=dt*derivaday(velocidady[i]+l22*0.5*dt); 
+    l32=dt*derivadax2(velocidadx[i]+0.5*l21*dt,velocidady[i]+0.5*l22*dt,y[i]+0.5*k22*dt);
 
-    k41=dt*derivadax(velocidadx[i]+l31*0.5);
-    l41=dt*derivadax2(velocidadx[i]+0.5*l31,velocidady[i]+0.5*l32,x[i]+0.5*k31);
-    k42=dt*derivadax(velocidadx[i]+l32*0.5);
-    l42=dt*derivadax2(velocidadx[i]+0.5*l31,velocidady[i]+0.5*l32,y[i]+0.5*k32);
+    k41=dt*derivadax(velocidadx[i]+l31*0.5*dt);
+    l41=dt*derivadax2(velocidadx[i]+0.5*l31*dt,velocidady[i]+0.5*l32*dt,x[i]+0.5*k31*dt);
+    k42=dt*derivadax(velocidadx[i]+l32*0.5*dt);
+    l42=dt*derivadax2(velocidadx[i]+0.5*l31*dt,velocidady[i]+0.5*l32*dt,y[i]+0.5*k32*dt);
 
     x[i+1]=dt*i;
     velocidadx[i+1]=(1.0/6)*(l11+2*l21+2*l31+l41)+velocidadx[i];
