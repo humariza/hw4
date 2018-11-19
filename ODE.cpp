@@ -85,18 +85,15 @@ if(j==0){
    /* Creando archivo a partir de los repositorios de las clases*/ 
     ofstream file;
     file.open("ODE.txt");
-    //file << "x " << "y "<< "y1" << endl;
-   
     for(int i=0;i<N;i++){
     	file << x[i] <<" " << y[i] << " "<< velocidadx[i]<<" "<<velocidady[i]<< endl;
     
     }
-file.close();  }
+file.close();  
+}
 else{
      ofstream file;
     file.open("ODESANGULOS.txt",ios::app);
-    //file << "x " << "y "<< "y1" << endl;
-   
     for(int i=0;i<N;i++){
     	file << x[i] <<" " << y[i] << " "<< velocidadx[i]<<" "<<velocidady[i]<< endl;
     
