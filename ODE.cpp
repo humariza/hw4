@@ -28,7 +28,7 @@ float derivaday(float velocidady){
     return velocidady;
 }
 float derivaday2(float velocidadx,float velocidady,float y){
-    return -g-(((c)/m)*((velocidady*velocidady)+(velocidadx*velocidadx))*velocidady)/sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
+    return -g-(c/m)*((velocidady*velocidady)+(velocidadx*velocidadx))*velocidady/sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
 }
 
 
@@ -38,7 +38,7 @@ int main(){
     int N=4000;
     float v_0=300;
     float angulo[]={45,10,20,30,40,50,60,70};
- 
+    float radianes;
 for(int j=0;j<9;j++){
     float k11,k12,k21,k22,k31,k32,k41,k42;
     float l11,l12,l21,l22,l31,l32,l41,l42;
@@ -48,7 +48,7 @@ for(int j=0;j<9;j++){
     float velocidady[N];
     x[0]=0;
     y[0]=0;
-    float radianes=(angulo[j]*pi)/180.0;
+    radianes=(angulo[j]*pi)/180.0;
     velocidadx[0]=cos(radianes)*v_0;
     velocidady[0]=sin(radianes)*v_0;
 
