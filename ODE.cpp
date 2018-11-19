@@ -22,9 +22,14 @@ double derivadax(double t,double velocidadx,double velocidady,double x){
 }
 //Aceleracion
 double derivadax2(double t,double velocidadx,double velocidady,double x){
-    return ((-c)/m)*velocidadx*sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
+    return (((-c)/m)*velocidadx*((velocidady*velocidady)+(velocidadx*velocidadx))*velocidadx)/sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
 }
-
+double derivaday(double t,double velocidadx,double velocidady,double y){
+    return velocidady;
+}
+double derivaday2(double t,double velocidadx,double velocidady,double y){
+    return -g-(((c)/m)*velocidadx*((velocidady*velocidady)+(velocidadx*velocidadx))*velocidady)/sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
+}
 
 
 int main(){
