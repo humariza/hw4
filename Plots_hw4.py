@@ -8,6 +8,8 @@ plt.figure()
 plt.plot(ode1[1:],ode2[1:])
 plt.show()
 
+
+
 angulos1=np.genfromtxt('ODESANGULOS.txt',usecols=0)
 angulos2=np.genfromtxt('ODESANGULOS.txt',usecols=1)
 
