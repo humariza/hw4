@@ -6,14 +6,24 @@ using namespace std;
 float pi=3.1416;
 float g=10;
 float m=0.2;
+float c=0.2;
 /* Son necesarias 4 derivdas, la primera y segunda derivada en x
 y la primera y segunda derivada en y
 */
-float derivadax(double t,double velocidadx,double velocidady,double x);
-float derivadax2(double t,double velocidadx,double velocidady,double x);
-float derivaday(double t,double velocidadx,double velocidady,double y);
-float derivaday2(double t,double velocidadx,double velocidady,double y);
+double derivadax(double t,double velocidadx,double velocidady,double x);
+double derivadax2(double t,double velocidadx,double velocidady,double x);
+double derivaday(double t,double velocidadx,double velocidady,double y);
+double derivaday2(double t,double velocidadx,double velocidady,double y);
 
+
+//velocidad
+double derivadax(double t,double velocidadx,double velocidady,double x){
+    return velocidadx;
+}
+//Aceleracion
+double derivadax2(double t,double velocidadx,double velocidady,double x){
+    return ((-c)/m)*velocidadx*sqrt((velocidady*velocidady)+(velocidadx*velocidadx));
+}
 
 
 
