@@ -34,7 +34,7 @@ float derivaday2(float velocidadx,float velocidady,float y){
 
 int main(){
 
-    float dt=0.0005;
+    float dt=0.00085;
     int N=4000;
     float v_0=300;
     float angulo[]={45,10,20,30,40,50,60,70};

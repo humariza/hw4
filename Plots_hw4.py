@@ -6,6 +6,8 @@ ode1= np.genfromtxt('ODE.txt',usecols=0)
 ode2= np.genfromtxt('ODE.txt',usecols=1)
 plt.figure()
 plt.plot(ode1[1:],ode2[1:])
+plt.ylim(0,10)
+plt.savefig("ODES45.png")
 plt.show()
 
 
@@ -45,5 +47,6 @@ plt.plot(grados70x,grados70y,label="70º")
 plt.ylim(0,10)
 plt.legend()
 plt.grid()
-plt.show()
+plt.savefig("ODESANGULOS.png")
+
 
