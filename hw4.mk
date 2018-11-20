@@ -4,7 +4,7 @@ Resultados_hw4.pdf: resultados_hw4.tex
 	pdflatex Resultados_hw4.tex
 
 ## siguen las graficas que afectan el latex
-Resultados_hw4.tex: ODES.txt ODES45.txt PDES.txt Plots_hw4.py
+Resultados_hw4.tex: ODE.txt ODESANGULOS.txt PDES.txt Plots_hw4.py
 	python Plots_hw4.py
 
 ## siguen las cosas que afectan a cada archivo de datos
