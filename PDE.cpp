@@ -2,6 +2,7 @@
 #include <fstream>
 #include <math.h>
 #include <stdio.h>
+using namespace std;
 /* 
 Condiciones iniciales
 */
@@ -18,7 +19,7 @@ v=k/(cp*rho);
 
 ofstream file;
 file.open("PDE.txt");   
-file <<"Holi";    
+file <<0;    
 file.close();  
     return 0;
 }

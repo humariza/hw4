@@ -8,7 +8,6 @@ plt.figure()
 plt.plot(ode1[1:],ode2[1:])
 plt.ylim(0,10)
 plt.savefig("ODES45.png")
-plt.show()
 
 
 
@@ -37,13 +36,13 @@ grados60y=angulos2[20001:24000]
 grados70x=angulos1[24001:28000]
 grados70y=angulos2[24001:28000]
 plt.figure()
-plt.plot(grados10x,grados10y,label="10º")
-plt.plot(grados20x,grados20y,label="20º")
-plt.plot(grados30x,grados30y,label="30º")
-plt.plot(grados40x,grados40y,label="40º")
-plt.plot(grados50x,grados50y,label="50º")
-plt.plot(grados60x,grados60y,label="60º")
-plt.plot(grados70x,grados70y,label="70º")
+plt.plot(grados10x,grados10y,label="10")
+plt.plot(grados20x,grados20y,label="20")
+plt.plot(grados30x,grados30y,label="30")
+plt.plot(grados40x,grados40y,label="40")
+plt.plot(grados50x,grados50y,label="50")
+plt.plot(grados60x,grados60y,label="60")
+plt.plot(grados70x,grados70y,label="70")
 plt.ylim(0,10)
 plt.legend()
 plt.grid()
