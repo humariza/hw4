@@ -16,6 +16,9 @@ float tcalcita=10;
 int main(){
 v=k/(cp*rho);
 
-
+ofstream file;
+file.open("PDE.txt");   
+file <<"Holi";    
+file.close();  
     return 0;
 }
